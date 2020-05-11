@@ -1,0 +1,60 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>2017108243 강성범</title>
+    <!--css연결-->
+    <link href="digitalcontent_css.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!--전체화면-->
+    <div id="box">
+        <div id="header"><strong>디지털콘텐츠 과제</strong></div>
+        <div  id="nav"><p>&darr;버튼들을 클릭해 주세요</p>
+            <!--리스트-->
+            <ol>
+                <!--해당 글자를 누르면 iframe화면에 화면 출력-->
+                <li><a href="Intro.html" target="frame1"><span>자기소개서</span></a></li>
+                <li><a href="Certification.html" target="frame1"><span>자격증획득</span></a></li>
+                <li><a href="Volunteer.html" target="frame1"><span>봉사실적</span></a></li>
+                <li><a href="Aspiration.html" target="frame1"><span>포부</span></a></li>
+            </ol>
+        </div>
+        <div  id="wrap">
+            <!--iframe화면에 defalut로 intro화면 출력-->
+            <div  id="content">
+                <iframe src="intro.html"  id="frame1" name="frame1" ></iframe>
+            </div>
+            <!--check box+image-->
+            <div id="banner1">
+                <img src="kang.jpg" alt="no image">
+                <div id="icon_wrap">
+                    <div><input type="checkbox" value="man" checked="checked" onclick="return false;"><img class="icon" src="man.png" alt="no image"></div>
+                    <div><input type="checkbox" disabled value="man"><img class="icon" src="woman.png" alt="no image"></div>
+                    <div><input type="checkbox" value="millitary" checked="checked" onclick="return false;"><img class="icon" src="military.png" alt="no image"></div>
+                    <div><input type="checkbox" disabled value="millitary"><img class="icon" src="obligation-free.png" alt="no image"></div>
+                </div>
+            </div>
+            <!--table구현 및 'q-net'자격증 사이트 연결-->
+            <div id="banner2"><strong><a href="http://www.q-net.or.kr/man001.do?gSite=Q" target="_blank">자격증</a></strong><br>
+                <table border="1">
+                    <th colspan="2">보유자격증</th>
+                    <tr>
+                        <td>1.</td>
+                        <td>태권도 3단</td>
+                    </tr>
+                    <tr>
+                        <td>2.</td>
+                        <td>정보처리기능사</td>
+                    </tr>
+                    <tr>
+                        <td>3.</td>
+                        <td>항공기체정비기능사</td>
+                    </tr>
+                    </table>
+            </div>
+        </div>
+        <!--저작권 표시-->
+        <div id="footer">Copyright 2020. 강성범(2017108243) All Rights Reserved.</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,180 @@
+/*스크롤바 기능을 하면서 안보이게 설정. explore은 불가.*/
+body{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+/*화면을 div별로 나눈 것들의 기본값 설정*/
+div{
+    padding:5px; margin:5px;
+    text-align:center;
+    border:1px solid #cccccc;
+}
+
+/*a링크에 연결된 text 밑줄*/
+a{
+    text-decoration: none;
+}
+
+/*전체화면 설정, 처음 설정 할 때는 가로의 크기를 70%로 지정하여 사용을 하였다. 하지만,
+밑에서 사용하는iframe의 반응형 크기조절은 javascript을 이용해야 하기 때문에 현재 상황에서는 
+크기조절 불가능하다. 때문에 고정된 값으로 설정하였다. 추후 iframe의 크기를 반응형으로  수정 할 수 
+있게 된다면 몇가지 수정으로 반응형 웹페이지 만들수 있게 함*/
+#box{
+    width:1000px;
+    margin:0 auto;
+    min-width: 718px;
+    margin-top: 60px;
+    background-image: url('ocean.jpg');
+    background-repeat: no-repeat;
+    overflow:hidden;
+}
+
+/*header부분의 크기 설정*/
+#header{
+    width:98%; height:100px;
+    line-height:100px;
+}
+
+/*header의 크기 설정*/
+#header strong{
+    font-size: 20px;
+}
+
+/*nav 설정*/
+#nav{
+    width:98%; height:100px;
+    overflow:hidden;
+    line-height:28px;
+}
+
+/*nav에 포함되는 네가지 글자 주변을 border로 영역 표시. 리스트를 사용하였으나 list-style:none;
+으로 글자앞에 아무것도 포함되지않게 설정*/
+#nav ol li{
+    width:16%; height:40px;
+    line-height:55px;
+    text-align:center;
+    list-style:none;
+    float: left ;
+    border:1px solid #aaaaaa;
+    margin-left: 2px;
+}
+
+/*네가지 글자를 hover하였을 때 1.4s 동안 점점 커지게 설정*/
+#nav span{ 
+    font-size: 101%;
+    color:blue;
+    transition-duration: 1.4s;
+}
+#nav span:hover{
+    font-size: 150%;
+    color:rgb(243,115,033);
+}
+
+/*content+bannner1+banner2*/
+#wrap{
+    width:98%;
+    overflow:hidden;
+}
+
+/*iframe의 위치 설정*/
+#content{
+    width:720px; height:415px;
+    text-align:left;
+    padding:0px;
+    margin : 0 auto;
+    margin-top: 5px;
+    float:left;
+    
+}
+
+/*iframe의 크기 설정*/
+#content iframe{
+    border: 0px;
+    display:block;
+    width: 719px; height: 414px;
+    position: absolute;
+    margin : 0 auto;
+    overflow: hidden;
+}
+
+/*image와 check box의 공간을 분할 하여 레이아웃*/
+#banner1{
+    width:24%; height:150px;
+    float:left;
+    display: flex;
+    flex-direction: row;
+}
+
+/*증명사진*/
+#banner1 img{
+    display: block;
+    max-width: auto; 
+    max-height: 100%;
+    float:left;
+}
+
+/*check box + image, image와 분할을 하여 세로로 정렬*/
+#icon_wrap{
+    margin:0px auto;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+/*check box의 icon 크기설정*/
+#banner1 .icon{
+    margin:5px;
+    width:20px;
+    height: 20px;
+   
+}
+
+/*각 체크박스의 위치를 center로 설정*/
+#banner1 div{
+    width: 100%; height: 100%; 
+    border:0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+/*자격증 부분*/
+#banner2{
+    width:24%; height:228px;
+    padding-top: 10px;
+    float:left;
+}
+
+/*table 기본 설정*/
+#banner2 table{
+    width: 100%;
+    margin-top: 5px;
+    text-align: center;
+    font-size:15px;
+    line-height: 45px;
+    border-color: #ffffff;
+    border-radius: 10px;
+}
+
+/*모서리 둥굴게*/
+#banner2 table th{
+    border-radius: 10px;
+}
+#banner2 table tr{
+    border-radius: 10px;
+}
+#banner2 table td{
+    border-radius: 10px;
+}
+
+/*저작권 표시*/
+#footer{
+    width:98%; height:100px;
+    text-align: right;
+    font-size: 11px;
+    line-height:100px;
+}
