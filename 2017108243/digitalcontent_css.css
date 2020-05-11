@@ -171,10 +171,19 @@ a{
     border-radius: 10px;
 }
 
-/*저작권 표시*/
+/*저작권 표시 및 깃허브*/
 #footer{
     width:98%; height:100px;
     text-align: right;
     font-size: 11px;
-    line-height:100px;
+}
+
+#footer #github{
+    width: 25px; height: 25px;
+}
+
+#footer #github:hover{
+    -webkit-filter: invert(70%);
+    filter: invert(70%);
+
 }
